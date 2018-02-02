@@ -1,6 +1,4 @@
 class Customer < ActiveRecord::Base
-  belongs_to :province
-
+  validates :name, uniqueness: true
   validates :email, uniqueness: true
-  validates :name, :email, presence: true
 end
